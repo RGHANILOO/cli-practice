@@ -1,11 +1,13 @@
 {
   "name": "cli-practice",
-  "bin": "./dist/index.js",
+  "bin": {
+    "practice": "./dist/index.js"
+  },
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "link": "yarn --global unlink practice-cli && yarn --global link",
+    "link": "pnpm unlink && pnpm link --global && practice",
     "dev": "tsc -w"
   },
   "keywords": [],
@@ -14,5 +16,8 @@
   "devDependencies": {
     "@types/node": "^20.12.7",
     "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "commander": "^12.0.0"
   }
 }
